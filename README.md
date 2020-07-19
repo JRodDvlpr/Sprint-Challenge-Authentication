@@ -40,19 +40,31 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
-- [ ] What does bcrypt do to help us store passwords in a secure manner.
+• The purpose is to create and store the session data in the server memory when the client logs in and then store the session Id in a cookie on the client browser.
+• The session Id is then sent on subsequent requests to the server and the server compares it with the stored session data and proceeds to process the requested action.
 
-- [ ] What does bcrypt do to slow down attackers?
+- [ x ] What does bcrypt do to help us store passwords in a secure manner.
+• It creates a hash that is then used for authentication instead of using the user password.
 
-- [ ] What are the three parts of the JSON Web Token?
+
+- [ x ] What does bcrypt do to slow down attackers?
+
+• It adds a salt to protect against rainbow table attacks
+
+
+- [ x ] What are the three parts of the JSON Web Token?
+
+• The header
+• The payload
+• The signature
 
 ## Minimum Viable Product
 
 Implement an User Authentication System. Hash user's passwords before saving them to the database. Use `JSON Web Tokens` or `Sessions and Cookies` to persist authentication across requests.
 
-- [ ] Implement the `register` and `login` functionality inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
-- [ ] Implement the `authenticate` middleware inside `/auth/authenticate-middleware.js`.
-- [ ] Write a **minimum o 2 tests** per API endpoint. Write more tests if you have time.
+- [ x ] Implement the `register` and `login` functionality inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
+- [ x ] Implement the `authenticate` middleware inside `/auth/authenticate-middleware.js`.
+- [ x ] Write a **minimum o 2 tests** per API endpoint. Write more tests if you have time.
 
 **Note**: the database already has the users table, but if you run into issues, the migrations are available.
 
